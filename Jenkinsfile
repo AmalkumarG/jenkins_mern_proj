@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Tear down any existing Docker Compose containers to avoid conflicts
-                    sh 'docker-compose -f ${DOCKER_COMPOSE_FILE} down'  // Stop and remove the containers
+                    sh 'docker compose -f ${DOCKER_COMPOSE_FILE} down'  // Stop and remove the containers
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Build and start the containers using Docker Compose in detached mode
-                    sh 'docker-compose -f ${DOCKER_COMPOSE_FILE} up --build -d'  // Build and run Docker Compose in detached mode
+                    sh 'docker compose -f ${DOCKER_COMPOSE_FILE} up --build -d'  // Build and run Docker Compose in detached mode
                 }
             }
         }
