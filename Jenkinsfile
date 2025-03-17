@@ -1,9 +1,6 @@
 pipeline {
     agent { label 'node1' }  // Specify the agent node (node1)
 
-    tools {
-        dockerTool "docker"  // Specify the Docker tool (ensure it's properly configured in Jenkins)
-    }
 
     environment {
         DOCKER_COMPOSE_FILE = 'docker-compose.yml'  // Path to the Docker Compose file
