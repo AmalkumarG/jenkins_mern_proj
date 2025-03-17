@@ -1,6 +1,8 @@
 pipeline {
     agent { label 'node1' }  // Specify the agent node (node1)
-
+    options {
+        timeout(time: 2, unit: 'HOURS')  // Set the timeout to 2 hours
+    }
 
     environment {
         DOCKER_COMPOSE_FILE = 'docker-compose.yml'  // Path to the Docker Compose file
