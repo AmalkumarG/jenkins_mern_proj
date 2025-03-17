@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'node1' }  // Specify the agent node (node1)
     tools {
-        docker "docker"
+        dockerTool "docker"
     }
     environment {
         DOCKER_COMPOSE_FILE = 'docker-compose.yml'  // Path to the Docker Compose file
