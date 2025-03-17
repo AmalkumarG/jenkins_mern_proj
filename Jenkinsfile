@@ -6,7 +6,6 @@ pipeline {
     }
 
     stages {
-
         stage('Run Docker Compose with Build and Detached') {
             steps {
                 script {
@@ -16,7 +15,7 @@ pipeline {
                 }
             }
         }
-
+    }
 
     post {
         always {
@@ -24,6 +23,5 @@ pipeline {
             cleanWs()  // Clean workspace
         }
     }
-
-  }
 }
+
